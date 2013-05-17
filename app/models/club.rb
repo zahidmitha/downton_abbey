@@ -1,4 +1,4 @@
-class Club
+class Club < ActiveRecord::Base
   attr_reader :name
 
   def initialize(name)

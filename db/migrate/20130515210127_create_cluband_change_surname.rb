@@ -6,7 +6,7 @@ class CreateClubandChangeSurname < ActiveRecord::Migration
     add_column :servants, :aristocrat_id, :integer
     create_table :club do |c|
       c.string :name
-      c.integer :aristoccrat_id
+      c.integer :aristocrat_id
   end
     add_index :club, :name
 
