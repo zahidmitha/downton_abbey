@@ -1,12 +1,14 @@
 class Servant < ActiveRecord::Base
-  attr_accessible :last_name, :occupation, :age, :nickname
   before_create :first_letter_last_name
+
+  attr_accessible :last_name, :occupation, :age, :nickname
+  validates :last_name, :presence => true
   validates :occupation, :inclusion => { :in =>%w(Butler Maid Cook Concubine)}
   validates :age, :numericality => { :greater_than => 16 }
-  # validates (:nickname, :length => {:maximum => 6, :message "Not brief enough!"})
+  validates :nickname, :length => { :maximum => 6 }
 
-  def nickname
-    @nickname = self.last_name[0,1]
+  def first_letter_last_name
+    self.nickname = last_name[0,1]
   end
 
 

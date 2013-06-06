@@ -1,9 +1,6 @@
 class Club < ActiveRecord::Base
-  attr_reader :name
 
-  def initialize(name)
-    @name = name
-  end
-  belongs_to :aristocrats
+  has_and_belongs_to_many :aristocrats
+  attr_accessible :name
 
 end

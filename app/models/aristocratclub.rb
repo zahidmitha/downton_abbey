@@ -1,5 +1,5 @@
-class AristocratPost < ActiveRecord::Base
+class AristocratClub < ActiveRecord::Base
 
-  attr_accessor :aristocrat_id, :club_id
+  attr_accessible :aristocrat_id, :club_id
 
 end

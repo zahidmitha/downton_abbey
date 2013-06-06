@@ -1,4 +1,6 @@
 DowntonAbbey::Application.routes.draw do
+
+  resources :aristocrats
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

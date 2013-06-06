@@ -1,13 +1,15 @@
 class CreateClubandChangeSurname < ActiveRecord::Migration
   def change
-    remove_column :aristocrats, :last_name, :string
+    remove_column :aristocrats, :last_name
     add_column :aristocrats, :surname, :string
     add_column :servants, :nickname, :string
     add_column :servants, :aristocrat_id, :integer
-    create_table :club do |c|
+    add_column :servants, :age, :integer
+    create_table :clubs do |c|
       c.string :name
-      c.integer :aristocrat_id
   end
-    add_index :club, :name
+    add_index :clubs, :name
+
+  end
 
 end
