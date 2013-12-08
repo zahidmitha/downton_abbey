@@ -16,7 +16,7 @@ class Aristocrat < ActiveRecord::Base
   # end
 
   def secret_societies
-    self.joins(:clubs).where("clubs.name = 'Illuminati' OR clubs.name = 'Freemasons'")
+    Aristocrat.joins(:clubs).where("clubs.name = 'Illuminati' OR clubs.name = 'Freemasons'")
 
   end
 

@@ -18,7 +18,7 @@ development:
   database: downton_abbey_development
   pool: 5
   username: zahid
-  password: postgresql
+  password: postgres
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -44,7 +44,7 @@ test:
   database: downton_abbey_test
   pool: 5
   username: zahid
-  password: postgresql
+  password: postgres
 
 production:
   adapter: postgresql
@@ -52,4 +52,4 @@ production:
   database: downton_abbey_production
   pool: 5
   username: zahid
-  password: postgresql
+  password: postgres
